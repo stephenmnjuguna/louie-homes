@@ -18,7 +18,7 @@ export function PropertyCard({ property }: { property: Property }) {
     <article className="property-card">
       <Link href={`/properties/${property.slug}`} className="property-image-link" aria-label={`Explore ${property.name}`}>
         <Image src={property.images[0].src} alt={property.images[0].alt} fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" className="cover-image" />
-        <span className="image-badge">{property.intent === "Buy" ? "For sale" : "For rent"}</span>
+        <span className="image-badge">{property.intent}</span>
         <span className="image-arrow"><ArrowIcon /></span>
       </Link>
       <div className="property-card-body">

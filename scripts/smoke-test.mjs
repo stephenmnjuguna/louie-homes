@@ -14,9 +14,11 @@ async function page(path, expectedStatus = 200) {
 }
 
 const home = await page("/");
-for (const expected of ["home-hero", "Find Your", "Dream Home", "louie-homes-logo.jpg", 'href="/properties"', 'href="/about"', 'href="/contact"', "mobile-menu", "location-links", "preview-note"]) {
+for (const expected of ["home-hero", "Find Your", "Dream Home", "louie-homes-logo.jpg", 'href="/properties"', 'href="/about"', 'href="/contact"', "mobile-menu", "location-links", "Website preview · Properties, pricing and imagery are illustrative."]) {
   assert.ok(home.includes(expected), `Homepage missing ${expected}`);
 }
+assert.ok(!home.includes('class="preview-note"'), "Homepage should open directly with the hero");
+assert.ok(home.includes('name="robots" content="noindex, nofollow"'), "Preview must remain noindex");
 assert.equal((home.match(/class="property-card"/g) || []).length, 6, "Homepage must show six cards");
 
 const browse = await page("/properties");
@@ -24,7 +26,9 @@ assert.ok(browse.includes("16 homes"), "Browse count should be 16");
 assert.ok(browse.includes("search-toolbar") && browse.includes("advanced-filters"));
 for (const slug of slugs) {
   assert.ok(browse.includes(`/properties/${slug}`), `Browse missing ${slug}`);
-  await page(`/properties/${slug}`);
+  const detail = await page(`/properties/${slug}`);
+  assert.ok(detail.includes("Property <em>Overview</em>"), `${slug} is missing the property overview`);
+  assert.ok(detail.includes("Illustrative property · Not a live offer"), `${slug} is missing the local indicator`);
 }
 for (const [query, count] of [
   ["?intent=Rent", "7 homes"],

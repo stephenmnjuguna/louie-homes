@@ -50,8 +50,7 @@ export function SiteFooter() {
       </div>
       <div className="page-shell footer-bottom">
         <Brand inverse />
-        <p>Find Your Dream Home</p>
-        <p>Concept website. Listings, imagery and pricing are illustrative.</p>
+        <p>Website preview · Properties, pricing and imagery are illustrative.</p>
       </div>
     </footer>
   );

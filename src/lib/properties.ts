@@ -30,7 +30,7 @@ export const properties: Property[] = [
     bathrooms: 3,
     area: 310,
     summary: "A modern retreat with light-filled rooms and a quiet garden outlook.",
-    description: "An illustrative home concept shaped around easy indoor-outdoor living. Expansive glazing, warm finishes and generous gathering spaces set the tone for a slower pace of life.",
+    description: "This four-bedroom maisonette pairs open-plan living with a covered terrace and garden space. A home office adds a quieter place to work or study.",
     amenities: ["Garden", "Open-plan living", "Covered terrace", "Home office", "Parking"],
     images: [
       { src: "/images/hero-house.jpg", alt: "Modern home with broad glazing at dusk" },
@@ -51,7 +51,7 @@ export const properties: Property[] = [
     bathrooms: 2,
     area: 245,
     summary: "Architectural lines, natural textures and room to make it your own.",
-    description: "This demonstration concept pairs a crisp contemporary exterior with flexible spaces for everyday life. Its calm palette and open layout create a considered backdrop for living.",
+    description: "A single-level layout gives this three-bedroom bungalow a straightforward flow. The open kitchen, flexible study and private garden offer room for daily routines and time outdoors.",
     amenities: ["Private garden", "Flexible study", "Open kitchen", "Parking"],
     images: [
       { src: "/images/residence-one.jpg", alt: "Contemporary house with timber facade and garden" },
@@ -72,7 +72,7 @@ export const properties: Property[] = [
     bathrooms: 2,
     area: 128,
     summary: "An airy apartment concept for an effortless city rhythm.",
-    description: "A demonstration apartment defined by daylight, useful storage and a generous shared living space. A refined, uncomplicated base for the way you live now.",
+    description: "This two-bedroom apartment brings the living and dining areas together in one open space. A balcony and storage add flexibility to its compact footprint.",
     amenities: ["Open-plan living", "Balcony", "Storage", "Parking"],
     images: [
       { src: "/images/residence-two.jpg", alt: "Sunlit contemporary living room" },
@@ -93,7 +93,7 @@ export const properties: Property[] = [
     bathrooms: 3,
     area: 285,
     summary: "A warm timber exterior frames a bold, welcoming home concept.",
-    description: "A sample residence imagined for people who value form and function in equal measure. Layered textures, generous glazing and an adaptable floor plan bring everyday comfort to an architectural silhouette.",
+    description: "The four-bedroom house combines a family room and home office with a terrace and garden. Its timber-led exterior gives the design a warm architectural character.",
     amenities: ["Terrace", "Family room", "Home office", "Parking", "Garden"],
     images: [
       { src: "/images/residence-three.jpg", alt: "Timber-clad modern house with glass entrance" },
@@ -114,7 +114,7 @@ export const properties: Property[] = [
     bathrooms: 1,
     area: 105,
     summary: "Soft light and a calm interior for coming home to yourself.",
-    description: "An illustrative apartment with a welcoming living area and a simple, versatile layout. The concept brings warmth and ease to a compact footprint.",
+    description: "A two-bedroom apartment with an open living area and practical storage. The restrained layout makes good use of its 105 m² plan.",
     amenities: ["Open living", "Natural light", "Storage", "Parking"],
     images: [
       { src: "/images/residence-five.jpg", alt: "Bright living room with pale blue seating" },
@@ -135,7 +135,7 @@ export const properties: Property[] = [
     bathrooms: 4,
     area: 360,
     summary: "Generous proportions and striking architecture for a new chapter.",
-    description: "This sample home concept brings together generous shared rooms and quieter private spaces. Its open character is designed to make daily routines and memorable gatherings feel equally at home.",
+    description: "Five bedrooms give this maisonette room for a larger household. Open-plan living connects to a terrace and garden, while a separate home office provides space for focused work.",
     amenities: ["Garden", "Terrace", "Open-plan living", "Home office", "Parking"],
     images: [
       { src: "/images/hero-house.jpg", alt: "Modern architectural home at dusk" },
@@ -148,18 +148,18 @@ export const properties: Property[] = [
 const additionalConcepts: Array<{
   slug: string; name: string; intent: Property["intent"]; type: Property["type"];
   location: string; price: number; bedrooms: number; bathrooms: number; area: number;
-  summary: string; amenities: string[]; photo: string;
+  summary: string; description: string; amenities: string[]; photo: string;
 }> = [
-  { slug: "kimbo-garden-bungalow", name: "Kimbo Garden Bungalow", intent: "Rent", type: "Bungalow", location: "Kimbo", price: 70000, bedrooms: 3, bathrooms: 2, area: 165, summary: "Single-level living with a shaded garden and easy family flow.", amenities: ["Garden", "Covered patio", "Parking"], photo: "residence-one.jpg" },
-  { slug: "kenyatta-road-maisonette", name: "Kenyatta Road Maisonette", intent: "Rent", type: "Maisonette", location: "Kenyatta Road", price: 100000, bedrooms: 3, bathrooms: 3, area: 210, summary: "A bright two-storey layout with room to gather and retreat.", amenities: ["Family room", "Balcony", "Parking"], photo: "residence-three.jpg" },
-  { slug: "eastern-bypass-family-home", name: "Eastern Bypass Family Home", intent: "Rent", type: "Own-compound house", location: "Eastern Bypass", price: 125000, bedrooms: 4, bathrooms: 3, area: 255, summary: "Generous family rooms and a private outdoor edge.", amenities: ["Private garden", "Study", "Parking"], photo: "hero-house.jpg" },
-  { slug: "membley-five-bedroom", name: "Membley Five Bedroom", intent: "Rent", type: "Maisonette", location: "Membley", price: 150000, bedrooms: 5, bathrooms: 4, area: 310, summary: "A spacious concept for larger households and shared moments.", amenities: ["Terrace", "Family room", "Parking"], photo: "residence-three.jpg" },
-  { slug: "ruiru-studio-court", name: "Ruiru Courtyard Apartment", intent: "Buy", type: "Apartment", location: "Ruiru", price: 6800000, bedrooms: 2, bathrooms: 2, area: 96, summary: "A compact, light-led home concept with flexible living space.", amenities: ["Balcony", "Open kitchen", "Parking"], photo: "residence-two.jpg" },
-  { slug: "mugutha-terrace-apartment", name: "Mugutha Terrace Apartment", intent: "Buy", type: "Apartment", location: "Mugutha", price: 9000000, bedrooms: 3, bathrooms: 2, area: 126, summary: "An apartment with a generous living zone and terrace outlook.", amenities: ["Terrace", "Storage", "Parking"], photo: "residence-five.jpg" },
-  { slug: "kamakis-garden-maisonette", name: "Kamakis Garden Maisonette", intent: "Buy", type: "Maisonette", location: "Kamakis", price: 23500000, bedrooms: 4, bathrooms: 3, area: 268, summary: "A warm architectural concept with layered indoor-outdoor spaces.", amenities: ["Garden", "Family room", "Parking"], photo: "residence-one.jpg" },
-  { slug: "membley-private-residence", name: "Membley Private Residence", intent: "Buy", type: "Own-compound house", location: "Membley", price: 32000000, bedrooms: 5, bathrooms: 4, area: 335, summary: "Private outdoor space and flexible rooms for a changing family.", amenities: ["Private garden", "Study", "Terrace"], photo: "hero-house.jpg" },
-  { slug: "mugutha-courtyard-home", name: "Mugutha Courtyard Home", intent: "Buy", type: "Own-compound house", location: "Mugutha", price: 14500000, bedrooms: 3, bathrooms: 2, area: 182, summary: "A considered house concept wrapped around everyday outdoor life.", amenities: ["Courtyard", "Open kitchen", "Parking"], photo: "residence-three.jpg" },
-  { slug: "bypass-blue-apartment", name: "Bypass Blue Apartment", intent: "Rent", type: "Apartment", location: "Eastern Bypass", price: 55000, bedrooms: 2, bathrooms: 2, area: 102, summary: "A calm apartment base with a practical layout and soft light.", amenities: ["Balcony", "Storage", "Parking"], photo: "residence-five.jpg" },
+  { slug: "kimbo-garden-bungalow", name: "Kimbo Garden Bungalow", intent: "Rent", type: "Bungalow", location: "Kimbo", price: 70000, bedrooms: 3, bathrooms: 2, area: 165, summary: "Single-level living with a shaded garden and easy family flow.", description: "Three bedrooms sit within a practical single-level plan. A covered patio extends the living space toward the garden, with parking included in the sample details.", amenities: ["Garden", "Covered patio", "Parking"], photo: "residence-one.jpg" },
+  { slug: "kenyatta-road-maisonette", name: "Kenyatta Road Maisonette", intent: "Rent", type: "Maisonette", location: "Kenyatta Road", price: 100000, bedrooms: 3, bathrooms: 3, area: 210, summary: "A bright two-storey layout with room to gather and retreat.", description: "This three-bedroom maisonette provides a separate family room for shared time and a balcony for a change of setting. The 210 m² plan balances common and private spaces.", amenities: ["Family room", "Balcony", "Parking"], photo: "residence-three.jpg" },
+  { slug: "eastern-bypass-family-home", name: "Eastern Bypass Family Home", intent: "Rent", type: "Own-compound house", location: "Eastern Bypass", price: 125000, bedrooms: 4, bathrooms: 3, area: 255, summary: "Generous family rooms and a private outdoor edge.", description: "A four-bedroom house arranged around family living, with a separate study and private garden in the sample plan. Parking rounds out the everyday essentials.", amenities: ["Private garden", "Study", "Parking"], photo: "hero-house.jpg" },
+  { slug: "membley-five-bedroom", name: "Membley Five Bedroom", intent: "Rent", type: "Maisonette", location: "Membley", price: 150000, bedrooms: 5, bathrooms: 4, area: 310, summary: "A spacious concept for larger households and shared moments.", description: "Five bedrooms and a separate family room give this maisonette options for larger households. The terrace adds an outdoor gathering space to its 310 m² plan.", amenities: ["Terrace", "Family room", "Parking"], photo: "residence-three.jpg" },
+  { slug: "ruiru-studio-court", name: "Ruiru Courtyard Apartment", intent: "Buy", type: "Apartment", location: "Ruiru", price: 6800000, bedrooms: 2, bathrooms: 2, area: 96, summary: "A compact, light-led home concept with flexible living space.", description: "An open kitchen supports the shared living space in this 96 m², two-bedroom apartment. A balcony adds a useful outdoor connection.", amenities: ["Balcony", "Open kitchen", "Parking"], photo: "residence-two.jpg" },
+  { slug: "mugutha-terrace-apartment", name: "Mugutha Terrace Apartment", intent: "Buy", type: "Apartment", location: "Mugutha", price: 9000000, bedrooms: 3, bathrooms: 2, area: 126, summary: "An apartment with a generous living zone and terrace outlook.", description: "This three-bedroom apartment pairs a generous living area with a terrace. Storage helps keep the 126 m² layout organised.", amenities: ["Terrace", "Storage", "Parking"], photo: "residence-five.jpg" },
+  { slug: "kamakis-garden-maisonette", name: "Kamakis Garden Maisonette", intent: "Buy", type: "Maisonette", location: "Kamakis", price: 23500000, bedrooms: 4, bathrooms: 3, area: 268, summary: "A warm architectural concept with layered indoor-outdoor spaces.", description: "A four-bedroom maisonette with a dedicated family room and garden. Its 268 m² plan gives shared and private activities their own space.", amenities: ["Garden", "Family room", "Parking"], photo: "residence-one.jpg" },
+  { slug: "membley-private-residence", name: "Membley Private Residence", intent: "Buy", type: "Own-compound house", location: "Membley", price: 32000000, bedrooms: 5, bathrooms: 4, area: 335, summary: "Private outdoor space and flexible rooms for a changing family.", description: "This five-bedroom house includes a study, terrace and private garden. The 335 m² sample layout has space for both work and family life.", amenities: ["Private garden", "Study", "Terrace"], photo: "hero-house.jpg" },
+  { slug: "mugutha-courtyard-home", name: "Mugutha Courtyard Home", intent: "Buy", type: "Own-compound house", location: "Mugutha", price: 14500000, bedrooms: 3, bathrooms: 2, area: 182, summary: "A considered house concept wrapped around everyday outdoor life.", description: "A three-bedroom house with an open kitchen and a courtyard for outdoor time. The 182 m² plan keeps daily living simple and connected.", amenities: ["Courtyard", "Open kitchen", "Parking"], photo: "residence-three.jpg" },
+  { slug: "bypass-blue-apartment", name: "Bypass Blue Apartment", intent: "Rent", type: "Apartment", location: "Eastern Bypass", price: 55000, bedrooms: 2, bathrooms: 2, area: 102, summary: "A calm apartment base with a practical layout and soft light.", description: "A two-bedroom apartment with storage and a balcony. Its 102 m² sample layout focuses on the essentials without crowding the living space.", amenities: ["Balcony", "Storage", "Parking"], photo: "residence-five.jpg" },
 ];
 
 properties.push(...additionalConcepts.map((item) => ({
@@ -175,7 +175,7 @@ properties.push(...additionalConcepts.map((item) => ({
   bathrooms: item.bathrooms,
   area: item.area,
   summary: item.summary,
-  description: `${item.summary} This illustrative ${item.type.toLowerCase()} in ${item.location} demonstrates how LOUIE HOMES could present a considered home search. Photography and features are design examples only.`,
+  description: item.description,
   amenities: item.amenities,
   images: [
     { src: `/images/${item.photo}`, alt: "Architectural image used for this illustrative home concept" },

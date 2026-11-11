@@ -30,7 +30,7 @@ async function PropertiesContent({ searchParams }: { searchParams: Promise<Searc
   }).sort((a, b) => sort === "price-asc" ? a.price - b.price : sort === "price-desc" ? b.price - a.price : 0);
 
   return <main className="browse-page">
-    <section className="page-intro page-shell"><span className="eyebrow">Discover / The collection</span><h1>Find your <em>next place.</em></h1><p>Explore illustrative homes across Nairobi and Kiambu. Search by location, home style and what matters to you.</p></section>
+    <section className="page-intro page-shell"><span className="eyebrow">Discover / The collection</span><h1>Find your <em>next place.</em></h1><p>Browse sample homes across Nairobi and Kiambu. Search by location, home style and what matters to you.</p></section>
     <div className="section-shell browse-content">
       <form action="/properties" method="get" className="search-toolbar" aria-label="Search and filter homes">
         <fieldset className="toolbar-intent"><legend>I want to</legend>{[["", "All"], ["Buy", "Buy"], ["Rent", "Rent"]].map(([value, label]) => <label key={label}><input type="radio" name="intent" value={value} defaultChecked={intent === value} /><span>{label}</span></label>)}</fieldset>
@@ -47,7 +47,7 @@ async function PropertiesContent({ searchParams }: { searchParams: Promise<Searc
       </form>
       <div className="location-shortcuts" aria-label="Browse by location">{locations.map((place) => <Link key={place} href={`/properties?location=${encodeURIComponent(place)}`}>{place}</Link>)}</div>
       <section className="results-panel" aria-labelledby="results-title"><div className="results-heading"><div><span className="eyebrow">The collection</span><h2 id="results-title">Explore homes</h2></div><div className="results-actions"><span className="results-count" role="status">{filtered.length} {filtered.length === 1 ? "home" : "homes"}</span><Link href="/properties" className="clear-link">Clear filters</Link></div></div>
-        {filtered.length ? <div className="property-grid browse-grid">{filtered.map((property) => <PropertyCard key={property.slug} property={property} />)}</div> : <div className="empty-state"><h3>No concepts match those filters.</h3><p>Try another search term or broaden your criteria.</p><Link className="button button-dark" href="/properties">Clear filters</Link></div>}
+        {filtered.length ? <div className="property-grid browse-grid">{filtered.map((property) => <PropertyCard key={property.slug} property={property} />)}</div> : <div className="empty-state"><h3>No homes match those filters.</h3><p>Try another search term or broaden your criteria.</p><Link className="button button-dark" href="/properties">Clear filters</Link></div>}
       </section>
     </div>
   </main>;

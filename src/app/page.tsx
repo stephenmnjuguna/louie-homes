@@ -7,7 +7,7 @@ import { properties } from "@/lib/properties";
 
 export const metadata: Metadata = {
   title: "Find Your Dream Home",
-  description: "Explore a considered LOUIE HOMES concept experience for finding a place that feels like yours.",
+  description: "Explore LOUIE HOMES and find a place that feels like yours.",
 };
 
 export default function Home() {
@@ -17,14 +17,12 @@ export default function Home() {
         <Image src="/images/hero-house.jpg" alt="Contemporary home glowing at dusk beneath mature trees" fill sizes="100vw" className="cover-image hero-photo" priority />
         <div className="hero-shade" />
         <div className="page-shell hero-content">
-          <div className="hero-topline"><span>LOUIE HOMES / A new perspective on home</span><span>01 — 03</span></div>
           <div className="hero-copy">
             <span className="eyebrow eyebrow-light">The art of finding home</span>
             <h1 id="hero-title">Find Your <em>Dream Home.</em></h1>
             <p>Thoughtful spaces across Nairobi and Kiambu. A clearer way to discover the place for your next chapter.</p>
             <Link className="hero-text-link" href="/properties">Discover homes <ArrowIcon /></Link>
           </div>
-          <div className="hero-caption"><span className="caption-rule" /> Architectural imagery for inspiration. Homes shown are demonstrations.</div>
         </div>
       </section>
 
@@ -43,7 +41,6 @@ export default function Home() {
 
       <section className="section-shell featured-section" aria-labelledby="featured-title">
         <div className="section-heading"><div><span className="eyebrow">The collection</span><h2 id="featured-title">Homes with a <em>point of view.</em></h2></div><Link className="underlined-link" href="/properties">View all homes <ArrowIcon /></Link></div>
-        <p className="demo-note">Demonstration collection · all details, prices and imagery are illustrative.</p>
         <div className="property-grid">{properties.slice(0, 6).map((property) => <PropertyCard key={property.slug} property={property} />)}</div>
       </section>
 

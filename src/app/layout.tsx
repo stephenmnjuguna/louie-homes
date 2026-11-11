@@ -10,5 +10,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
-  return <html lang="en"><body><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader /><div className="preview-note">Concept preview · homes, prices and imagery are illustrative; availability is not asserted.</div><div id="main-content">{children}</div><SiteFooter /></body></html>;
+  return <html lang="en"><body><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader /><div id="main-content">{children}</div><SiteFooter /></body></html>;
 }

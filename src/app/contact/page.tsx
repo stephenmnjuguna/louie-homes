@@ -14,7 +14,7 @@ async function ContactContent({ searchParams }: { searchParams: Promise<{ proper
   const params = await searchParams;
   const property = getProperty(typeof params.property === "string" ? params.property : "");
   return <main className="contact-page">
-    <section className="page-intro page-shell"><span className="eyebrow">Connect / LOUIE HOMES</span><h1>Let’s talk about <em>home.</em></h1><p>A thoughtful search starts with a conversation.</p></section>
-    <div className="section-shell contact-layout"><div className="contact-copy"><span className="eyebrow">The next step</span><h2>Every good move begins somewhere.</h2><p>This is an initial frontend preview. A verified business contact channel has not been provided yet, so enquiries cannot be sent from this site.</p><p>{property ? "Your draft is prepared for the " + property.name + " demonstration concept." : "Explore the concept collection, then prepare a message about the kind of home you imagine."}</p><Link href="/properties" className="underlined-link">Browse demonstration homes →</Link></div><ContactDraft propertyName={property?.name} /></div>
+    <section className="page-intro page-shell"><span className="eyebrow">Connect / LOUIE HOMES</span><h1>Let’s talk about <em>home.</em></h1><p>Put your priorities into words as you explore the collection.</p></section>
+    <div className="section-shell contact-layout"><div className="contact-copy"><span className="eyebrow">The next step</span><h2>Every good move begins somewhere.</h2><p>{property ? "Use the draft to note what interests you about " + property.name + "." : "Start with the kind of space, location and budget you have in mind."}</p><Link href="/properties" className="underlined-link">Browse homes →</Link></div><ContactDraft propertyName={property?.name} /></div>
   </main>;
 }
